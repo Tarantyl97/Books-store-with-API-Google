@@ -1,0 +1,74 @@
+.slaider__images {
+  position: absolute;
+  width: 77vw;
+  height: 702px;
+  margin-left: 11.1vw;
+}
+
+.slaider__images .image {
+  background-position: center center;
+  width: inherit;
+  max-width: 1120px;
+  height: inherit;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 800ms ease;
+  box-shadow: 0px 6px 59px rgba(53, 49, 84, 0.08);
+}
+
+.slaider__images .image.active {
+  opacity: 1;
+}
+
+.slaider__arrows {
+  position: absolute;
+  width: 205px;
+  height: 20px;
+  margin-top: 702px;
+  margin-left: 42.88vw;
+}
+
+.slaider__arrow {
+  position: absolute;
+  font-size: 41px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9E98DC;
+}
+
+.slaider__arrow.left {
+  left: 0;
+}
+
+.slaider__arrow.right {
+  right: 0;
+}
+
+.slaider__dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 71px;
+  bottom: -15px;
+  width: 63px;
+  height: 9px;
+}
+
+.slaider__dots-item {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #EFEEF6;
+  transition: background 0.4s ease;
+}
+
+.slaider__dots-item:hover,
+.slaider__dots-item.active {
+  background: #9E98DC;
+}

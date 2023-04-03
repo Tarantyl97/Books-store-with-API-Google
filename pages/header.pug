@@ -1,0 +1,18 @@
+mixin imgHeader(url, name)
+    li.navigation-images__item
+        img(src=url, alt=name)
+
+header.header
+    .header-container 
+        h2.header-container__logo Bookshop
+        nav.navigation-panel
+            ul.navigation-panel__list
+                li.navigation-panel__item Books
+                li.navigation-panel__item audiobooks
+                li.navigation-panel__item Stationery & gifts
+                li.navigation-panel__item blog
+        nav.navigation-images
+            ul.navigation-images__list
+                +imgHeader('../images/user.svg', 'user')
+                +imgHeader('../images/search.svg', 'search')
+                +imgHeader('../images/shop bag.svg', 'shop bag')

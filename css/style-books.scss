@@ -1,0 +1,75 @@
+@import "style";
+
+.new-book {
+    display: flex;
+
+    .new-book__img{
+        margin-right: 2.5vw;
+        width: 212px;
+        box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+        background: #EEECEC;
+    }
+
+    .new-book__main-text {
+        margin: 0;
+        width: 176px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .new-book__authors {
+        @include text-style(400, 10px, capitalize);
+        font-family: 'Open Sans';
+        color: $base-gray;
+        margin: 85px 0 4px 0;
+    }
+
+    .new-book__title{
+        @include text-style(700, 16px, none);
+        color: $base-black;
+        margin: 4px 0;
+    }
+
+    .new-book__raiting {
+        @include text-style(400, 10px, none);
+        font-family: 'Open Sans';
+        color: #5C6A79;
+    }
+
+    .new-book__info {
+        @include text-style(400, 10px, capitalize);
+        font-family: 'Open Sans';
+        margin: 16px 0;
+        width: 176px;
+        height: 38px;
+        color: $base-gray;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+
+    .new-book__price {
+        @include text-style(700, 13px, uppercase);
+        color: $base-black;
+        margin: 16px 0;
+    }
+
+    .new-book__btn {
+        @include text-style(700, 8px, uppercase);
+        color: #4C3DB2;
+        width: 176px;
+        height: 45px;
+        border-color: #4C3DB2;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .new-book__btn_active {
+        border: 1px solid #EEEDF5;
+        content: 'in the cart';
+        text-transform: uppercase;
+        color: #5C6A79
+    }
+}

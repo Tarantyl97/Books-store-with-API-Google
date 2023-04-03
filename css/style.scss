@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$base-black: #1C2A39;
+$base-gray: #5C6A79;
+
+@mixin text-style($weight: 700, $size: 24px, $transform: uppercase) {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: $weight;
+font-size: $size;
+text-transform: $transform;
+}
+
+body {
+  margin: 0;
+  max-width: 1440px;
+  box-sizing: border-box;
+
+      .header-container {
+        display: flex;
+        max-width: 1440px;
+        margin-left: 11.52vw;
+        height: 116px;
+      }
+
+        .header-container__logo {
+          @include text-style(700, 24px, none);
+          color: $base-black;
+          margin: 47px 16.875vw 40px 0;
+        }
+
+      .navigation-panel__list {
+        @include text-style(700, 10px);
+        gap: 2.77vw;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 56px 0 48px 0;
+        cursor: pointer;
+        color: $base-gray;
+
+        .navigation-panel__item:active, .navigation-panel__item:hover {
+          font-weight: 900;
+          color: $base-black;
+        }
+      }
+
+      .navigation-images__list {
+        margin: 54px 0 47px 17.5vw;
+        cursor: pointer;
+        gap: 2.77vw;
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+  .img-book-first {
+    position: absolute;
+    width: 149px;
+    height: 204px;
+    margin: 78px 0 0 84.51vw;
+    background: #9E98DC;
+    text-decoration: none;
+    color: #1C2A39;
+
+    .img-book-first__text {
+      @include text-style (700, 18px, uppercase);
+      width: 109px;
+      height: 66px;
+      padding: 102px 20px 10px;
+      margin: 0;
+    }
+
+      .img-book-first__arrow {
+        font-size: 54px;
+        position: absolute;
+        margin-top: -29px;
+        margin-left: 20px;
+      }
+    }
+  
+  .img-book-second{
+    position: absolute;
+    width: 137px;
+    height: 273px;
+    margin: 362px 0 0 90.48vw;
+    background: #FF8FE6;
+    text-decoration: none;
+    color: #1C2A39;
+
+    .img-book-second__text {
+      @include text-style (700, 18px, uppercase);
+      width: 69px;
+      height: 88px;
+      padding: 149px 47px 10px 21px;
+      margin: 0;
+    }
+
+      .img-book-second__arrow {
+        font-size: 54px;
+        position: absolute;
+        margin-top: -29px;
+        margin-left: 20px;
+      }
+  }
+
+  .navigation-sorting {
+    max-width: 28.8vw;
+    min-width: 250px;
+    height: 710px;
+    background: #EFEEF6;
+    margin-top: 836px;
+
+
+    .navigation-sorting__list {
+      margin: 0;
+      padding: 45px 10.55vw 0 10.97vw;
+
+      .navigation-sorting__item {
+        list-style: none;
+        margin: 0 0 23px 0;
+        height: 15px;
+
+        .navigation-sorting__btn {
+          @include text-style(500, 12px, capitalize);
+          color: $base-gray;
+          line-height: 15px;
+          cursor: pointer;
+          border: none;
+          width: 130px;
+          height: 15px;
+          background: transparent;
+        }
+
+        .navigation-sorting__btn_active {
+          @include text-style(700, 16px, capitalize);
+          color: $base-black;
+        }
+      }
+
+      .navigation-sorting__item:active {
+        list-style: disc;
+        color: #756AD3;
+      }
+    }
+  }    
+
+  @media screen and (max-width: 375px) {
+
+    .header-container {
+      margin-left: 10vw;
+      max-width: 375px;
+    }
+
+      .header-container__logo {
+        margin: 47px 20px 40px 0;
+      }
+
+      .navigation-panel {
+        display: none;
+      }
+
+      .navigation-images__list {
+        margin: 54px 0 47px 20px;
+        gap: 4vw;
+      }
+
+    .slaider__images {
+      margin-left: 10vw;
+    }
+
+    .slaider__arrows {
+      margin-left: 20vw;
+    }
+    
+    .img-book-first {
+      display: none;
+    }
+
+    .img-book-second {
+      display: none;
+    }
+
+    .navigation-sorting {
+      margin-top: 800px;
+    }
+
+    .contents {
+      margin: 20px 0 0 20vw;
+    }
+
+    .new-book {
+      flex-direction: column;
+    }
+
+    .contents-load__btn{
+      margin: 80px 0 0 20vw;
+    }
+
+    .new-book__img {
+      max-width: 150px;
+      height: 250px;
+    }
+  }
+}
+
+

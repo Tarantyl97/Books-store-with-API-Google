@@ -1,0 +1,22 @@
+block variables 
+    - let pageTitle = 'Books store'
+
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel="stylesheet", href="../css/style-slaider.css")
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/style-books.css")
+    link(rel="stylesheet", href="../css/contents.css")
+    script(src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse")
+  body
+    include .//header
+    include .//slaider
+    include .//images_book
+    include .//nav
+    section.contents
+    button.contents-load__btn load more
+  script(src='../js/output-slaider.min.js')
+  script(src='../js/output.min.js')
+
